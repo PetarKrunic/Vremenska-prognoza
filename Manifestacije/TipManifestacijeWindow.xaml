@@ -1,0 +1,228 @@
+﻿<Window x:Class="Manifestacije.TipManifestacijeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Manifestacije"
+        xmlns:custom="clr-namespace:Manifestacije.Validation"
+        mc:Ignorable="d"
+        Title="Dodavanje tipa vrste" Height="265" Width="490" WindowStartupLocation="CenterScreen"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown" ResizeMode="CanMinimize" BorderBrush="Green" BorderThickness="1">
+
+    <Window.Resources>
+
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="FontStyle" Value="Normal" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="Margin" Value="3"/>
+        </Style>
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="Width" Value="20" />
+            <Setter Property="Width" Value="200" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="FontStyle" Value="Normal" />
+            <Setter Property="Margin" Value="3"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF7EB4EA"/>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="Blue"/>
+                                <Setter Property="BorderThickness" TargetName="border" Value="1.5" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+
+
+        <Style x:Key="textBoxInError" TargetType="{x:Type TextBox}">
+            <Setter Property="Height" Value="20" />
+            <Setter Property="Width" Value="200" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="Margin" Value="3"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF7EB4EA"/>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="Blue"/>
+                                <Setter Property="BorderThickness" TargetName="border" Value="1.5" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip"
+                        Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                        Path=(Validation.Errors)/ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <ControlTemplate x:Key="validationTemplate">
+            <DockPanel>
+                <TextBlock Foreground="Red" FontSize="20">!</TextBlock>
+                <AdornedElementPlaceholder/>
+            </DockPanel>
+        </ControlTemplate>
+
+        <SolidColorBrush x:Key="TransparentWhite" Color="White" Opacity="0.5" />
+
+    </Window.Resources>
+
+
+    <StackPanel Orientation="Vertical" >
+        <TextBlock x:Name="lblNaslov" HorizontalAlignment="Center" FontSize="22" Style="{StaticResource ResourceKey=TextBlockStyle}">Add Event Type</TextBlock>
+
+        <StackPanel Orientation="Horizontal" Margin="5">
+
+            <Grid Background="{StaticResource TransparentWhite}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="15"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Grid.Row="0" Text="Type ID :" Style="{StaticResource ResourceKey=TextBlockStyle}" Margin="0,3,3,2.8" Width="81"  ></TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="2" Text="Type Name :" Style="{StaticResource ResourceKey=TextBlockStyle}" Margin="0,3,3,3" />
+                <TextBlock Grid.Column="0" Grid.Row="4" Text="Description:" Style="{StaticResource ResourceKey=TextBlockStyle}" Margin="0,2.6,3,3" Width="81" />
+
+                <TextBox x:Name="txtID" Grid.Column="1" Grid.Row="0" Style="{StaticResource textBoxInError}" Validation.ErrorTemplate="{StaticResource validationTemplate}" >
+                    <TextBox.Text>
+                        <Binding Path="ID" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <custom:IDValidation  Min="0" Max="99999"/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    
+                </TextBox>
+                <TextBox x:Name="txtIME" Grid.Column="1" Grid.Row="2" Style="{StaticResource ResourceKey=TextBoxStyle}" >
+                    <TextBox.Text>
+                        <Binding Path="Ime" UpdateSourceTrigger="PropertyChanged">
+
+                        </Binding>
+                    </TextBox.Text>
+                    <Validation.ErrorTemplate>
+                        <ControlTemplate>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <AdornedElementPlaceholder Grid.Column="0" Grid.Row="0" x:Name="textBox"/>
+                                <TextBlock Grid.Column="0" Grid.Row="2" Text="{Binding [0].ErrorContent}" 
+                                           Foreground="Red" Style="{StaticResource ResourceKey=TextBlockStyle}"
+                                           HorizontalAlignment="Left" FontSize="12"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Validation.ErrorTemplate>
+                </TextBox>
+                <TextBox x:Name="txtOPIS" Grid.Column="1" Grid.Row="4" Height="100" Style="{StaticResource ResourceKey=TextBoxStyle}"
+                     ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible"
+                     ScrollViewer.HorizontalScrollBarVisibility="Auto" TextWrapping="Wrap"
+                     Text="{Binding Path=Opis}"></TextBox>
+
+            </Grid>
+            <StackPanel Orientation="Vertical" Width="192" Background="{StaticResource TransparentWhite}" Margin="5,0,5,0">
+                <Border Height="100" Width="100" BorderBrush="Green" BorderThickness="2"
+                             HorizontalAlignment="Center" Margin="47,10,45,5">
+                    <Image x:Name="Ikonica"  Opacity="1" Source="{Binding IkonicaP}" Margin="-1,1.2,-1.2,-1.6" />
+                </Border>
+
+                <StackPanel Orientation="Horizontal" Height="29" Margin="10,0,10,0">
+                    <TextBox x:Name="txtIKONICA" Width="118" Style="{StaticResource ResourceKey=textBoxInError}" Validation.ErrorTemplate="{StaticResource validationTemplate}" Height="20" FontSize="12"
+                             VerticalAlignment="Center" IsReadOnly="True" Text="{Binding IkonicaP, UpdateSourceTrigger=PropertyChanged}" Margin="10,3,3,2.6">
+                    </TextBox>
+                    <Button Foreground="Black" FontFamily="Calibri" 
+                    BorderBrush="Transparent" Width="41" Height="25" Click="Ikonica_Click">
+                        <TextBlock><Run Text="Upload"/></TextBlock>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation = "Horizontal" Height="54" Margin="13,20,0,0">
+                    <Button Foreground="Black" FontFamily="Calibri" FontSize="16" 
+                    BorderBrush="Transparent" Margin="10,12,90.6,10.4" Click="Potvrdi_Click" Width="67">
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock VerticalAlignment="Center"><Run Text="Add"/></TextBlock>
+                        </StackPanel>
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=txtID, Path=Text.Length, Mode=OneWay}" Value="0">
+                                        <Setter Property="IsEnabled" Value="False"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=txtIME, Path=Text.Length, Mode=OneWay}" Value="0">
+                                        <Setter Property="IsEnabled" Value="False"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=(Validation.HasError), ElementName=txtID}" Value="True">
+                                        <Setter Property="IsEnabled" Value="False"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=txtIKONICA, Path=Text.Length, Mode=OneWay}" Value="0">
+                                        <Setter Property="IsEnabled" Value="False"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=(Validation.HasError), ElementName=txtIKONICA}" Value="True">
+                                        <Setter Property="IsEnabled" Value="False"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Button Foreground="Black" FontFamily="Calibri" FontSize="16" 
+                    BorderBrush="Transparent" Click="Nazad_Click" Margin="-70,12,90.6,10.4" Width="67" >
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock VerticalAlignment="Center"><Run Text="Cancel"/></TextBlock>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+
+            </StackPanel>
+
+        </StackPanel>
+    </StackPanel>
+</Window>

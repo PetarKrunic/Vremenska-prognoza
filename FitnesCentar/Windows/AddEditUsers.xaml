@@ -1,0 +1,79 @@
+﻿<Window x:Class="SR41_2020_POP2021.Windows.AddEditUsers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SR41_2020_POP2021.Windows"
+        mc:Ignorable="d"
+        Title="AddEditUsers" Height="450" Width="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="80*"/>
+            
+        </Grid.RowDefinitions>
+
+        <Label Name="lblImePolaznika" Content="Ime" Grid.Row="0" Grid.Column="0" />
+        <TextBox Name="txtImePolaznika" Grid.Row="0" Grid.Column="1" Text="{Binding Path=Ime}" />
+
+        <Label Name="lblPrezimePolaznika" Content="Prezime" Grid.Row="1" Grid.Column="0"/>
+        <TextBox Name="txtPrezimePolaznika" Grid.Row="1" Grid.Column="1" Text="{Binding Path=Prezime}"/>
+
+        <Label Name="lblEmailPolaznika" Content="Email" Grid.Row="2" Grid.Column="0" />
+        <TextBox Name="txtEmailPolaznika" Grid.Row="2" Grid.Column="1" Text="{Binding Path=Email}"/>
+
+        <Label Name="lblTipPolaznika" Content="Tip" Grid.Row="3" Grid.Column="0" />
+        <ComboBox Grid.Column="1" Grid.Row="3" Name="ComboTipPolaznika"   SelectedItem="{Binding Path=TipKorisnika}">
+
+        </ComboBox>
+
+        <Label Name="lblPolPolaznika" Content="Pol" Grid.Row="4" Grid.Column="0"/>
+        <ComboBox Grid.Column="1" Grid.Row="4" Name="ComboPolaznika"  SelectedItem="{Binding Path=Pol}">
+
+        </ComboBox>
+
+        <Label Name="lblJmbgPolaznika" Content="JMBG" Grid.Row="5" Grid.Column="0"/>
+        <TextBox Name="txtJmbgPolaznika" Grid.Row="5" Grid.Column="1" Text="{Binding Path=JMBG}"/>
+
+        <Label Name="lblLozinkaPolaznika" Content="Loznika" Grid.Row="6" Grid.Column="0" />
+        <TextBox Name="txtLozinkaPolaznika" Grid.Row="6" Grid.Column="1" Text="{Binding Path=Lozinka}"/>
+
+        <Label Name="lblAdresaPolaznika" Content="Adresa" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Right" FontWeight="Bold" />
+
+
+        <Label Name="lblUlicaPolaznika" Content="Ulica" Grid.Row="8" Grid.Column="0"/>
+        <TextBox Name="txtUlicaPolaznika" Grid.Row="8" Grid.Column="1" Text="{Binding Path=Adresa.Ulica}"/>
+
+        <Label Name="lblBrojPolaznika" Content="Broj" Grid.Row="9" Grid.Column="0"/>
+        <TextBox Name="txtBrojPolaznika" Grid.Row="9" Grid.Column="1" Text="{Binding Path=Adresa.Broj}" />
+
+        <Label Name="lblGradPolaznika" Content="Grad" Grid.Row="10" Grid.Column="0"/>
+        <TextBox Name="txtGradPolaznika" Grid.Row="10" Grid.Column="1" Text="{Binding Path=Adresa.Grad}"/>
+
+        <Label Name="lblDrzavaPolaznika" Content="Drzava" Grid.Row="11" Grid.Column="0"/>
+        <TextBox Name="txtDrzavaPolaznika" Grid.Row="11" Grid.Column="1" Text="{Binding Path=Adresa.Drzava}"/>
+        
+
+
+        <Button Name="btnCancel" Click="btnCancelKorisnici_Click" Content="Cancel" Grid.Row="12" Grid.Column="0"/>
+        <Button Name="btnOk" Click=" btnOkKorisinici_Click" Content="Ok"  Grid.Row="12" Grid.Column="1"/>
+    </Grid>
+</Window>

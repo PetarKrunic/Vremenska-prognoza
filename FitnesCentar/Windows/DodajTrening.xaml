@@ -1,0 +1,34 @@
+﻿<Window x:Class="SR41_2020_POP2021.Windows.DodajTrening"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SR41_2020_POP2021.Windows"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="DodajTrening" Height="450" Width="800">
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\petar\source\repos\Treci semestar\Projekat C#\SR41-2020-POP2021\SR41-2020-POP2021\Resources/back3.jfif" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <DatePicker  Name="DatumTreninga" DisplayDateStart="{x:Static sys:DateTime.Today}" HorizontalAlignment="Left" Margin="10,42,0,349" Width="106"/>
+        <DataGrid CanUserAddRows="False"  Name="DGInstruktoriZaTrening" HorizontalAlignment="left" VerticalAlignment="Top" Width="721" Margin="10,66,0,0" Height="151"
+                AutoGeneratingColumn="DGInstruktoriZaTrening_AutoGeneratingColumn"></DataGrid>
+        <!--<ListBox Name="instruktorZaBiranje" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,60,0,0" Width="120" Height="170"/>-->
+        <!--<ListBox Name="dodajVreme" HorizontalAlignment="Left" Height="146" Margin="10,250,0,0" VerticalAlignment="Top" Width="120" />-->
+        <Button Name="ZakaziTrening" Content="Zakazi Trening" HorizontalAlignment="Left" Margin="31,222,0,0" VerticalAlignment="Top" Width="85" Click="ZakaziTrening_Click" />
+        <Button Name="Cancel" Content="Odustani" HorizontalAlignment="Left" Margin="640,222,0,0" VerticalAlignment="Top" Width="75" Click="Cancel_Click"/>
+        <ComboBox Name="ComboTrening" HorizontalAlignment="Left" Margin="145,42,0,0" VerticalAlignment="Top" Width="120"  SelectedItem="{Binding Path=Status}"/>
+        <TextBox Name="VremeTreninga" HorizontalAlignment="Left" Height="23" Margin="294,41,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="TrajanjeTreninga" HorizontalAlignment="Left" Height="23" Margin="446,41,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <DataGrid CanUserAddRows="False" Name="DGBrisanjeTreninga" HorizontalAlignment="Left" Height="115" Margin="10,276,0,0" VerticalAlignment="Top" Width="721" AutoGeneratingColumn="DGBrisanjeTreninga_AutoGeneratingColumn"/>
+        <Button Name="BrisanjeTreninga" Content="Obrisi trening" HorizontalAlignment="Left" Margin="247,391,0,0" VerticalAlignment="Top" Width="128" Click="BrisanjeTreninga_Click"/>
+        <Button Content="Logout" Click="Button_Click" HorizontalAlignment="Left" Margin="709,13,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBlock HorizontalAlignment="Left" Margin="325,16,0,0" TextWrapping="Wrap" Text="Vreme" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="486,18,0,0" TextWrapping="Wrap" Text="Trajanje" VerticalAlignment="Top"/>
+
+
+    </Grid>
+</Window>

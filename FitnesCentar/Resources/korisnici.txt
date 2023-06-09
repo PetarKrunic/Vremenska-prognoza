@@ -1,0 +1,46 @@
+a;aleksic;a;a;1111;Branimira Cosica,31,Novi Sad,Srbija;MUSKI;ADMINISTRATOR;True
+Vanjaaaa;Vanjici;vanja@gmail.com;vanja;2222;Krilova,16,Novi Sad,Srbija;ZENSKI;INSTRUKTOR;True
+Ali;Alic;ali@gmail.com;ali;1212;Branimira Cosica,31,Novi Sad,Srbija;MUSKI;INSTRUKTOR;True
+Tosa;Tosic;tosa@gmail.com;tosa;3333;Alekse Santica,72,Novi Sad,Srbija;MUSKI;INSTRUKTOR;True
+Mila;Milic;mila@gmail.com;mila;45789;Krilova,5,Novi Sad,Srbija;ZENSKI;POLAZNIK;True
+h;h;h@;h;124578;Krilova,78,Novi Sad,Srbija;MUSKI;INSTRUKTOR;True
+Niki;Nikolic;nikola@gmail.com;n;987;Lasla Galaaaa,45,Novi Sad,Srbija;MUSKI;INSTRUKTOR;True
+Marija;Maric;mare@;mare;456;Krilovaaaa,6,Novi Sad,Srbija;ZENSKI;INSTRUKTOR;True
+Duda;Dudic;duda@gmail.com;duda;4714;Krilova,5,Novi Sad,Srbija;ZENSKI;POLAZNIK;True
+Somi;Somic;somi@gmail.com;somi;451278;Bate Brkica,8,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+Marija;Maric;marija@gmail.com;marija;234123;Alekse Santica,72,Novi Sad,Srbija;ZENSKI;POLAZNIK;True
+Vuk;Vukic;vuk@gmail.com;vuk;784596;Kosovska,15,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+Olja;Oljic;olja@gmail.com;olja;456123;Krilova,12,Novi Sad,Srbija;ZENSKI;POLAZNIK;True
+Mirka;Mirka;mirka@gmail.com;mirka;457822;Krilova,8,Novi Sad,Srbija;ZENSKI;POLAZNIK;True
+Dalibor;Nj;dalibor@gmail.com;dalibor;1245693;Zeleznicka,15,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+j;j;j@;1;j;Bate Brkica,8,Novi sad,Srbija;MUSKI;POLAZNIK;True
+Niki;Niki;niki@hotmail.com;niki@gmail.com;121212;Bate Brkica,9,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+Kole;Kole;kole@gmail.com;kole;4444;Kosovska,15,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+Sanja;Sanjic;sanja@gmail.com;sanja;223344;Bulevar Osbodjenja,88,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+Dragana;Dragic;dragan@gmail.com;dragana;888888;Radnicka,15,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+Riki;Rikica;riki@gmail.com;riki@gmail.com;695874;Marka Miljanova,15,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+Sone;Sonic;sone2gmail.com;sone;565656;Slovacka,44,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+Mile;Mikic;mile@gmail.com;mile@gmail.com;457845;Strazilovska,15,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+Jelena;Jelic;jelena@hotmail.com;jelena;44774477;Krilova,4,Novi Sad,Srbija;ZENSKI;POLAZNIK;True
+Buda;Budic;buda@gmail.com;buda;010101;Slovacka,51,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+Urke;Urke;urek@gmail.com;urke;14125;Bate Brkica,2,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+Berna;Bernic;berna@gmail.com;berna;1245578;Mise Dimitrijevica,5,Novi Sad,Srbija;ZENSKI;POLAZNIK;True
+Milica;Mici;milica@gmail.com;milica;457812;Krilova,15,Novi Sad,Srbija;ZENSKI;POLAZNIK;True
+Dule;Dulic;dule@gmail.com;dule;124578963;Krilova,5,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+Ana;Anic;ana@gmail.com;ana;12457896;Bate Brkiica,5,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+Tanja;Tanjic;tanja@gmail.com;tanja;124569695;Slovacka,15,Novi Sad,Srbija;ZENSKI;POLAZNIK;True
+Mima;Mimic;mima@gmail.com;mima;258369;Bate Brkica,8,Novi Sad,Srbija;ZENSKI;INSTRUKTOR;False
+Ivana;Ivic;ivana@gmail.com;ivana;124578965;Bate Brkica,15,Novi Sad,Srbija;ZENSKI;POLAZNIK;True
+Niki;Nikic;n@gmail.com;niki;12457896;Krilova,5,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+m;m;m@gmail.com;m;1245742;Krilova,5,Novi Sad,Srbija;ZENSKI;POLAZNIK;True
+Luna;Lunic;luna@gmail.com;luna;124512451245;Krilova,5,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+Natasa;Natasa;natasa@gmail.com;natasa;123123123;Krilova,5,Novi Sad,Srbija;MUSKI;POLAZNIK;True
+Visnja;Visnjic;w;w;w;Krilova,5,Novi Sad,Srbija;ZENSKI;POLAZNIK;True
+Uros;q;q;q;q;q,q,qq,q;MUSKI;POLAZNIK;True
+a;a;aaaa;a;a;a,a,a,a;MUSKI;POLAZNIK;True
+g;g;g;g;g;g,g,g,g;MUSKI;POLAZNIK;True
+Jelena;Jelic;jelena@gmail.com;jelena;1402202025045;Krilova,5,Novi Sad,Srbija;ZENSKI;INSTRUKTOR;True
+Renata;Renata;renata@gmail.com;renata;789456123789;Cirpanova,5,Novi Sad,Srbija;ZENSKI;POLAZNIK;False
+Mihajlooo;Miki;miki@hotmail.com;miki;123451234512345;Krilova,5,Novi Sad,Srbija;MUSKI;INSTRUKTOR;True
+Leki;Leljic;lejla@hotmail.com;lejla;123456789123456;Krilova,5,Novi Sad,Srbija;ZENSKI;POLAZNIK;True
+d;;h;d;12345566756;d,d,d,;MUSKI;POLAZNIK;True

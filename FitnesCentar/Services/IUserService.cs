@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SR41_2020_POP2021.Services
+{
+    public interface IUserService
+    {
+        int SacuvajKorisnike(Object obj);
+
+        void CitajKorisnike();
+
+        void DeleteUser(string email);
+
+        void updateUSer(Object obj);
+    }
+}

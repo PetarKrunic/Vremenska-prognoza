@@ -1,0 +1,27 @@
+﻿<Window x:Class="SR41_2020_POP2021.Windows.InstruktorProzor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SR41_2020_POP2021.Windows"
+        mc:Ignorable="d"
+        Title="InstruktorProzor" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.46,0.56">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\petar\source\repos\Treci semestar\Projekat C#\SR41-2020-POP2021\SR41-2020-POP2021\Resources/back3.jfif" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <DataGrid  CanUserAddRows="False" HorizontalAlignment="Left"  Name="DGInstruktorPrikaz" Height="192" Margin="10,72,0,0" VerticalAlignment="Top" Width="721"
+                  AutoGeneratingColumn="DGInstruktor_AutoGeneratingColumn" />
+        <DataGrid CanUserAddRows="False" Name="DGInstruktoriInfo" HorizontalAlignment="Left" Height="80" Margin="10,340,0,0" VerticalAlignment="Top" Width="721" AutoGeneratingColumn="DataGrid_AutoGeneratingColumn"/>
+        <Button Name="ZakaziTreningInstruktor" Content="Dodaj trening" HorizontalAlignment="Left" Margin="22,269,0,0" VerticalAlignment="Top" Width="94" Click="ZakaziTreningInstruktor_Click"/>
+        <Button Name="ObrisiTreningInstruktor" Content="Obrisi trening" HorizontalAlignment="Left" Margin="121,269,0,0" VerticalAlignment="Top" Width="93" Click="ObrisiTreningInstruktor_Click"/>
+        <Button  Name="InstruktorIzmena" Click="InstruktorIzmena_Click" Content="Izmena" HorizontalAlignment="Left" Margin="10,316,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Logout" Click="Button_Click" HorizontalAlignment="Left" Margin="696,11,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox Name="p" PreviewKeyUp="TextBox_PreviewKeyUp"  HorizontalAlignment="Left" Height="18" Margin="590,268,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="141"/>
+        <TextBlock HorizontalAlignment="Left" Margin="627,291,0,0" TextWrapping="Wrap" Text="Pretraga po datumu" VerticalAlignment="Top" Height="36" Width="84" RenderTransformOrigin="0.422,0.296"/>
+
+
+
+    </Grid>
+</Window>

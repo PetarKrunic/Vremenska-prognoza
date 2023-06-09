@@ -1,0 +1,105 @@
+﻿<Window x:Class="Prognoza.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Vremenska Prognoza" Height="730" Width="600" MaxHeight="745" MaxWidth="600" >
+
+
+    <Border Padding="0">
+
+        <StackPanel>
+
+            <StackPanel.Background>
+                <ImageBrush ImageSource="C:/Users/petar/Desktop/Prevodioci/Prezentacije/slika2.jpg" />
+            </StackPanel.Background>
+
+
+            <TextBlock Text="Location" FontWeight="Bold" Margin="10 7 0 10" FontSize="20"/>
+
+
+            <Grid>
+                <ComboBox Name="cmb" IsEditable="True" Margin="0,0,167,0" Padding="2" BorderBrush="Black" BorderThickness="3">
+                </ComboBox>
+
+                <Button Name="refresh" Content="Refresh" HorizontalAlignment="Right" Width="107" Margin="0,0,27,-18" FontSize="20" Click="refresh_Click"/>
+
+            </Grid>
+
+
+            <TextBlock Name="town" Margin="10 0 0 45" Text="{Binding Path=Town, UpdateSourceTrigger=PropertyChanged}" FontSize="20" HorizontalAlignment="Left" FontWeight="ExtraBlack" Width="121">
+                <TextBlock.RenderTransform>
+                    <ScaleTransform ScaleX="1.3" ScaleY="3" />
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock Name="country" Margin="10 0 0 20" Text="{Binding Path=Country, UpdateSourceTrigger=PropertyChanged}" FontSize="20" FontWeight="Bold"/>
+
+            <Grid Height="347">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Name="Pic1"  Margin="0,28,291,174"/>
+
+                <Slider  HorizontalAlignment="Left" Width="266" Margin="51,203,0,104"/>
+
+                <TextBlock Name="temperature" Margin="0,0,149,235" FontSize="80" HorizontalAlignment="Right" Text="{Binding Path=Temperature,UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Name="cel" Margin="0,0,50,250"  FontSize="80" HorizontalAlignment="Right" Text="{Binding Path=VrijednostIzKoda, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Name="condition" Margin="0,110,109,197" FontSize="30" HorizontalAlignment="Right" Text="{Binding Path=Condition, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock  Margin="0,160,180,150" FontSize="20" HorizontalAlignment="Right" Text="Humidity"/>
+
+                <TextBlock Name="humidity" Margin="0,187,144,133" FontSize="20" HorizontalAlignment="Right" Text="{Binding Path=Humidity, UpdateSourceTrigger=PropertyChanged}" RenderTransformOrigin="0.416,0.809" Width="111"/>
+
+                <TextBlock Margin="0,160,10,160" FontSize="20" HorizontalAlignment="Right" Text="Wind Speed" Width="110"/>
+
+                <TextBlock Name="wndSpd" Margin="0,187,0,133" FontSize="20" HorizontalAlignment="Right" Text="{Binding Path=Windspeed, UpdateSourceTrigger=PropertyChanged}" Width="110"/>
+
+                <Image Margin="0,270,0,0" HorizontalAlignment="Left" Source="C:/Users/petar/Desktop/Prevodioci/Prezentacije/sunce.png" />
+
+                <TextBlock Margin="83,270,0,48" FontSize="20" HorizontalAlignment="Left" Text="Ponedeljak" Width="102" FontWeight="SemiBold"/>
+
+                <TextBlock Name="cond1" Margin="90,295,0,25" FontSize="17" HorizontalAlignment="Left" Text="{Binding Path=VrijednostIzKoda, UpdateSourceTrigger=PropertyChanged}" Width="98"/>
+
+                <TextBlock Name="temp1" Margin="106,315,0,0" FontSize="16" HorizontalAlignment="Left" Text="{Binding Path=VrijednostIzKoda, UpdateSourceTrigger=PropertyChanged}" Width="48" FontStyle="Italic"/>
+
+                <Image Margin="193,270,0,0" HorizontalAlignment="Left" Source="C:/Users/petar/Desktop/Prevodioci/Prezentacije/sunce.png" Width="81"/>
+
+                <TextBlock Margin="279,270,0,55" FontSize="20" HorizontalAlignment="Left" Text="Utorak" Width="104" FontWeight="SemiBold"/>
+
+                <TextBlock Name="cond2" Margin="288,295,0,30" FontSize="17" HorizontalAlignment="Left" Text="{Binding Path=VrijednostIzKoda, UpdateSourceTrigger=PropertyChanged}" Width="95"/>
+
+                <TextBlock Name="temp2" Margin="300,318,0,0" FontSize="16" HorizontalAlignment="Left" Text="{Binding Path=VrijednostIzKoda, UpdateSourceTrigger=PropertyChanged}" Width="60" FontStyle="Italic"/>
+
+                <Image Margin="0,270,130,0" HorizontalAlignment="Right" Source="C:/Users/petar/Desktop/Prevodioci/Prezentacije/sunce.png" Width="86"/>
+
+                <TextBlock Margin="467,270,0,48" FontSize="20" Text="Srijeda" FontWeight="SemiBold"/>
+
+                <TextBlock Name="cond3" Margin="0,295,10,25" FontSize="17" HorizontalAlignment="Right" Text="{Binding Path=VrijednostIzKoda, UpdateSourceTrigger=PropertyChanged}" Width="100"/>
+
+                <TextBlock Name="temp3" Margin="0,315,0,0" FontSize="16" HorizontalAlignment="Right" Text="{Binding Path=VrijednostIzKoda, UpdateSourceTrigger=PropertyChanged}" Width="96" FontStyle="Italic"/>
+
+            </Grid>
+
+            <Grid Height="216" RenderTransformOrigin="0.467,0.482">
+
+                <Image  HorizontalAlignment="Left" Source="C:/Users/petar/Desktop/Prevodioci/Prezentacije/sunce.png" Width="80" Margin="0,10,0,106"/>
+
+                <TextBlock Margin="85,24,0,170" FontSize="20" HorizontalAlignment="Left" Text="Cetvrtak" Width="94" FontWeight="SemiBold"/>
+
+                <TextBlock Name="cond4" Margin="92,51,0,146" FontSize="17" HorizontalAlignment="Left" Text="{Binding Path=VrijednostIzKoda, UpdateSourceTrigger=PropertyChanged}" Width="81"/>
+
+                <TextBlock Name="temp4" Margin="108,70,0,125" FontSize="16" HorizontalAlignment="Left" Text="{Binding Path=VrijednostIzKoda, UpdateSourceTrigger=PropertyChanged}" Width="65" FontStyle="Italic"/>
+
+                <Image  HorizontalAlignment="Left" Source="C:/Users/petar/Desktop/Prevodioci/Prezentacije/sunce.png" Width="80" Margin="191,0,0,106"/>
+
+                <TextBlock Margin="276,24,0,165" FontSize="20" HorizontalAlignment="Left" Text="Petak" Width="98" FontWeight="SemiBold"/>
+
+                <TextBlock Name="cond5" Margin="288,51,0,146" FontSize="17" HorizontalAlignment="Left" Text="{Binding Path=VrijednostIzKoda, UpdateSourceTrigger=PropertyChanged}" Width="93"/>
+
+                <TextBlock Name="temp5" Margin="302,70,0,125" FontSize="16" HorizontalAlignment="Left" Text="{Binding Path=VrijednostIzKoda, UpdateSourceTrigger=PropertyChanged}" Width="61" FontStyle="Italic"/>
+
+            </Grid>
+
+        </StackPanel>
+    </Border>
+</Window>
